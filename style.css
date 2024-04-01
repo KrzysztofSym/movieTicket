@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+/*===== VARIABLES CSS =====*/
+
+:root {
+    --h1-fs: 2rem;
+    --h1-fs-media: 3rem;
+    --h2-fs: 1.5rem;
+    --h2-fs-media: 2rem;
+    --h3-fs: 1.3rem;
+    --h3-fs-media: 1.8rem;
+    --h4-fs: 1.1rem;
+    --h4-fs-media: 1.5rem;
+    --p-fs: .8rem;
+    --p-fs-media: 1.1rem;
+    --a-fs: .7rem;
+    --a-fs-media: 1.1rem;
+    --li-fs: .7rem;
+    --li-fs-media: 1.1rem;
+
+    --clr-bg-main: #e9f2ef;
+    --clr-bg-pri: #f9fafc;
+    --clr-bg-sec: #f3fafa;
+    --clr-acc-main: #c9d8df;
+    --clr-acc-pri: #5b889e;
+    --clr-acc-sec: #db3769;
+    --clr-acc-thi: #eb407a;
+    --clr-acc-four: #ad0000;
+    --clr-acc-fif: #e03333;
+    --clr-text-main: #67696a;
+    --clr-text-pri: #36454F;
+
+    --shadow-color: #33cbb8;
+    --main-ff: 'Poppins', sans-serif;
+}
+
+/*===== BASE =====*/
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--main-ff);
+    font-size: var(--p-fs);
+    background: var(--clr-bg-main);
+    color: var(--clr-text-main);
+    width: 100%;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+li {
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--h1-fs);
+}
+
+h2 {
+    font-size: var(--h2-fs);
+}
+
+h3 {
+    font-size: var(--h3-fs);
+}
+
+h4 {
+    font-size: var(--h4-fs);
+}
+
+p,
+a,
+li {
+    font-size: var(--p-fs);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-text-main);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+
+    }
+}
+
+/* animation: scaleUp 1s ease-in-out;
+    transform-origin: center center; */
+
+/*===== BUTTONS =====*/
+
+.btn {
+    display: inline-block;
+    color: var(--clr-text-main);
+    padding: .5rem 0;
+    /* width: 100%; */
+    font-weight: 600;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: .2s;
+}
+
+.btn:hover {
+    box-shadow: 0 10px 36px rgba(0, 0, 0, .15);
+}
+
+.btn:active {
+    scale: .97;
+}
+
+/*===== PROJECT CSS =====*/
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #fff;
+    position: relative;
+    animation: scaleUp 1s ease-in-out;
+    transform-origin: center center;
+    box-shadow: 0px 8px 30px -10px var(--clr-acc-pri);
+    border-radius: .3rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    overflow: hidden;
+}
+
+header {
+    height: 10rem;
+    position: relative;
+    background-image: url('https://assetsio.gnwcdn.com/straznicy-galaktyki-3-zwiastun-zebrani-headline.jpg?width=690&quality=75&format=jpg&dpr=2&auto=webp');
+    background-position: center;
+    background-size: cover;
+}
+
+header:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .45);
+}
+
+.header-wrapper {
+    height: 100%;
+    padding: 1rem;
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 1;
+    z-index: 1;
+}
+
+.header-wrapper > i {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.location i {
+    margin-right: .2rem;
+}
+
+.seats {
+    display: flex;
+    align-items: center;
+}
+
+.rows {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.rows span {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+}
+
+.column1,
+.column2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.array {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-right: 2rem;
+}
+
+.array i {
+    height: 2rem;
+    width: 2rem;
+    display: grid;
+    place-content: center;
+}
+
+.legend {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+main>p {
+    text-align: center;
+}
+
+.item i {
+    padding-right: 0.2rem;
+}
+
+.column1 i, .column2 i {
+    color: var(--clr-acc-pri);
+}
+
+.item:nth-child(1) i { color: var(--clr-acc-pri); }
+.item:nth-child(2) i { color: var(--clr-acc-main); }
+.item:nth-child(3) i { color: var(--clr-acc-sec); }
+
+.column1 i:nth-child(n+6):nth-child(-n + 8),
+.column1 i:nth-child(n+18):nth-child(-n + 19),
+.column1 i:nth-child(n+18):nth-child(-n + 19),
+.column1 i:nth-child(21),
+.column1 i:nth-child(n+23):nth-child(-n + 24)
+{color: var(--clr-acc-main);}
+
+.column1 i:nth-child(n+14):nth-child(-n + 16) {
+    color: var(--clr-acc-sec);
+}
+
+
+.column2 i:nth-child(n+7):nth-child(-n + 8),
+.column2 i:nth-child(n+10):nth-child(-n + 11),
+.column2 i:nth-child(n+17):nth-child(-n + 18)
+ {color: var(--clr-acc-main);}
+
+svg {
+    display: block;
+    margin: 0 auto .5rem;
+    color: var(--clr-acc-pri);
+    stroke: var(--clr-acc-pri);
+    filter: drop-shadow(0px -3px 3px rgb(0 0 0 / 0.6));
+}
+
+footer {
+    display: flex;
+    color: #fff;
+}
+
+footer .label {
+    padding: .5rem;
+    background-color: var(--clr-acc-sec);
+}
+
+footer .foot-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: .5rem;
+    background-color: var(--clr-acc-thi);
+}
+
+footer .btn {
+    width: 4rem;
+    height: 3rem;
+}
